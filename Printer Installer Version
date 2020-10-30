@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PrinterInstallerInfo=$(cat /opt/PrinterInstallerClient/VERSION)
+
+if [ ! -z "$PrinterInstallerInfo" ] ; then
+  echo "<result>$PrinterInstallerInfo</result>"
+
+else
+  echo "<result>not found</result>"
+
+fi 
+exit 0

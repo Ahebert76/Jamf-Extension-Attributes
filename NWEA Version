@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -d /Applications/NWEA\ Secure\ Testing\ Browser.app ] ; then
+	RESULT=$( sudo defaults read /Applications/NWEA\ Secure\ Testing\ Browser.app/Contents/Info CFBundleGetInfoString )
+	echo "<result>$RESULT</result>"
+else
+	echo "<result>Not Installed</result>"
+fi

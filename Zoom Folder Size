@@ -1,0 +1,9 @@
+#!/bin/bash
+
+user=$(stat -f%Su /dev/console)
+
+cd /Users/$user/Documents/Zoom
+
+size=$(du -sh | awk '{print $1}')
+
+echo "<result>$size</result>"
